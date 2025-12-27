@@ -600,6 +600,51 @@
           letter-spacing: 2px;
         }
       }
+
+      /* =========================
+   SECCIÓN 2026
+========================= */
+      .year-overlay {
+        position: relative;
+        max-width: 900px;
+        margin: 6rem auto;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+      }
+
+      .year-overlay img {
+        width: 100%;
+        display: block;
+      }
+
+      .year-overlay::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(15, 14, 23, 0.2),
+          rgba(15, 14, 23, 0.85)
+        );
+      }
+
+      .year-text {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+        padding: 0 1.5rem;
+      }
+
+      .year-text p {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        color: #fff;
+        text-shadow: 0 0 25px rgba(255, 95, 162, 0.7);
+      }
     </style>
   </head>
   <body>
@@ -748,8 +793,20 @@
       </div>
     </section>
 
+    <section>
+      <div class="year-overlay">
+        <img src="./images/2026.png" alt="Nuestro 2026 juntos" />
+        <div class="year-text">
+          <p>
+            Por un 2026 juntos, caminando de la mano y con Dios guiando nuestro
+            amor 🤍🙏
+          </p>
+        </div>
+      </div>
+    </section>
+
     <button class="surprise-btn" onclick="openSurprise()">🎁 Sorpresa</button>
-    <footer>Hecho con ❤️ por Oscar — 2° Aniversario</footer>
+    <footer>Hecho por Oscar — 2° Aniversario - 28/12/2025</footer>
 
     <div class="surprise" id="surprise">
       <div class="surprise-content">
@@ -760,7 +817,7 @@
           <br /><br />
           Feliz aniversario. Que nuestra historia siga creciendo con fe,
           paciencia y mucho amor
-          <br>
+          <br />
           Oscar
         </p>
         <button class="surprise-btn" onclick="closeSurprise()">Cerrar</button>
